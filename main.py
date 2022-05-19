@@ -22,7 +22,7 @@ def add_new_point():
 
 def is_in(x, y): # revise this code if necessary
     global num_inner_points
-    if y < x: # check a point is in a circle or sphere here
+    if:  # check a point is in a circle or sphere here
         num_inner_points # count the number of points in a circle or sphere here
         return 'blue'
     else:
