@@ -47,8 +47,8 @@ def draw_figure_2d(xs = points_x, ys = points_y, color = points_color):
 
 def draw_figure_3d(xs = points_x, ys = points_y, zs = points_z, color = points_color):
     global num_inner_points
-    x = 6 * num_inner_points/500000
-    pi = round(x,2)
+    x = 6 * num_inner_points / 500000
+    pi = round(x, 2)
 
     fig = plt.figure(figsize=(5, 5))
     ax = fig.add_subplot(111, projection='3d')
