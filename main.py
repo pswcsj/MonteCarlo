@@ -22,8 +22,8 @@ def add_new_point():
 
 def is_in(x, y): # revise this code if necessary
     global num_inner_points
-    if y < x: # check a point is in a circle or sphere here
-        num_inner_points # count the number of points in a circle or sphere here
+    if ((x-area_size)**2 + (y-area_size)**2 + (z-area_size)**2) < 5**2:  # check a point is in a circle or sphere here
+        num_inner_points += 1 # count the number of points in a circle or sphere here
         return 'blue'
     else:
         return 'red'
@@ -61,12 +61,12 @@ def draw_figure_3d(xs = points_x, ys = points_y, zs = points_z, color = points_c
     plt.show()
 
 def extract_inner_points():
-    for x, y, c in zip(points_x, points_y, points_color):
+    for x, y, z, c in zip(points_x, points_y, points_z, points_color):
         if c == 'blue':
             # the variables below should contain only the coordinates of inner points
             inner_points_x.append(x)
             inner_points_y.append(y)
-            inner_points_z = [] # revise this code if necessary
+            inner_points_z.append(z) # revise this code if necessary
             inner_points_color = [] # revise this code if necessary
 
 
