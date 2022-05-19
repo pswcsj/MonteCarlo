@@ -45,7 +45,7 @@ def draw_figure_2d(xs = points_x, ys = points_y, color = points_color):
     plt.legend()
     plt.show()
 
-def draw_figure_3d(xs = points_x, ys = points_y, zs = points_z, color = points_color):
+def draw_figure_3d(xs = inner_points_x, ys = inner_points_y, zs = inner_points_z):
     global num_inner_points
     x = 6 * num_inner_points / 500000
     pi = round(x, 2)
@@ -53,7 +53,7 @@ def draw_figure_3d(xs = points_x, ys = points_y, zs = points_z, color = points_c
     fig = plt.figure(figsize=(5, 5))
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(xs, ys, zs,
-                c=color, s=1, alpha=0.3,
+                c='blue', s=1, alpha=0.3,
                 label='pi = {}'.format(pi))
     plt.xlabel('x')
     plt.xlabel('y')
