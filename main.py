@@ -61,12 +61,12 @@ def draw_figure_3d(xs = points_x, ys = points_y, zs = points_z, color = points_c
     plt.show()
 
 def extract_inner_points():
-    for x, y, c in zip(points_x, points_y, points_color):
+    for x, y, z, c in zip(points_x, points_y, points_z, points_color):
         if c == 'blue':
             # the variables below should contain only the coordinates of inner points
             inner_points_x.append(x)
             inner_points_y.append(y)
-            inner_points_z = [] # revise this code if necessary
+            inner_points_z.append(z) # revise this code if necessary
             inner_points_color = [] # revise this code if necessary
 
 if __name__ == "__main__":
