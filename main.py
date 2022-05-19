@@ -69,7 +69,8 @@ def extract_inner_points():
             inner_points_z = [] # revise this code if necessary
             inner_points_color = [] # revise this code if necessary
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     generate_points(500)
     extract_inner_points()
     draw_figure_2d() # or draw_figure_3d()
